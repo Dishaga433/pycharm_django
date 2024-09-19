@@ -1,0 +1,36 @@
+
+
+
+
+
+
+
+
+{% extends "dashboard.html" %}
+
+
+{% block content %}
+
+
+                          <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">SL NO</th>
+      <th scope="col">TITLE</th>
+      <th scope="col">DESCRIPTION</th>
+      <th scope="col">DATE</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for i in data %}
+    <tr>
+      <th scope="row">{{forloop.counter}}</th>
+      <td>{{i.title}}</td>
+      <td>{{i.description}}</td>
+      <td>{{i.date}}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+
+{% endblock %}
